@@ -1,7 +1,5 @@
 import tkinter as tk
-from tkinter import *
 from tkinter import messagebox
-from ttkthemes import ThemedStyle
 import export as ex
 
 

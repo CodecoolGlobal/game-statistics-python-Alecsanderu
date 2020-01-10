@@ -10,7 +10,7 @@ def get_text_for_sum_sold(file_name):
     return str(reports.sum_sold(file_name))
 
 
-def get_text_for_sellig_avg(file_name):
+def get_text_for_selling_avg(file_name):
     return str(reports.get_selling_avg(file_name))
 
 
@@ -65,7 +65,7 @@ def main():
         with open(export, "w") as f:
             f.write(get_text_for_most_played(import_file) + "\n")
             f.write(get_text_for_sum_sold(import_file) + "\n")
-            f.write(get_text_for_sellig_avg(import_file) + "\n")
+            f.write(get_text_for_selling_avg(import_file) + "\n")
             f.write(get_text_for_count_logest_title(import_file) + "\n")
             f.write(get_text_for_date_avg(import_file) + "\n")
             f.write(get_text_for_game_prop(import_file) + "\n")
