@@ -1,4 +1,8 @@
 import reports
+# import game_statics_gui as gs
+
+
+# title = gs.input_game()
 
 
 def print_most_played(file_name):
@@ -30,6 +34,20 @@ def print_date_average(file_name):
 def print_game_properties(file_name):
     while True:
         title = input("Enter Title To See Game Properties: ")
+        try:
+            game_properties = reports.get_game(file_name, title)
+            break
+        except ValueError:
+            print("No Title Found,please enter another one")
+            continue
+    print(f"What properties has this game? {title} \n {game_properties}")
+
+
+def print_game_properties_gui(file_name):
+    with open("title.txt", 'r') as f:
+        first_line = f.readline()
+    while True:
+        title = first_line
         try:
             game_properties = reports.get_game(file_name, title)
             break
